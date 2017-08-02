@@ -1,0 +1,4 @@
+# All xoffline features
+
++../../lib/xoffline/x_download_manager.js
++../../lib/xoffline/x_storage.js

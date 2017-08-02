@@ -51,3 +51,5 @@ goog.require('shaka.polyfill.VTTCue');
 goog.require('shaka.polyfill.VideoPlaybackQuality');
 goog.require('shaka.polyfill.installAll');
 goog.require('shaka.util.Error');
+goog.require('shaka.xoffline.XDownloadManager');
+goog.require('shaka.xoffline.XStorage');

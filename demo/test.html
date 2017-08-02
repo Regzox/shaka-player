@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../third_party/closure/goog/base.js"></script>
+  	<script type="text/javascript" src="../dist/deps.js"></script>
+  	<script type="text/javascript" src="../shaka-player.uncompiled.js"></script>
+	<script type="text/javascript">
+		function load() {
+			const videos = document.getElementsByTagName('video');
+			const video = videos[0];
+
+			if (!video) {
+				throw new Error('video is undefined or null');
+			}
+			const angel = 'http://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd'
+			const sintel = 'http://storage.googleapis.com/shaka-demo-assets/sintel-mp4-only/dash.mpd';
+			const player = new shaka.Player(video);
+			const xstorage = new shaka.xoffline.XStorage(player);
+			player.load(angel);
+		}
+	</script>
+</head>
+<body onload="load()">
+<video
+	width="100%"
+	controls
+	crossorigin="anonymous"></video>
+</body>
+</html>
